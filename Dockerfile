@@ -1,5 +1,10 @@
 FROM debian:jessie
 
+RUN apt-get update
+RUN apt-get install -y wget
+RUN apt-get install -y curl
+RUN apt-get install -y tmux
+
 # create non root user
 #############################
 RUN adduser lovelace --disabled-password --gecos ""
@@ -16,9 +21,6 @@ RUN chown lovelace -R /config
 ############################
 
 # install wallet dependencies
-RUN apt-get update
-RUN apt-get install -y wget
-RUN apt-get install -y curl
 RUN apt-get install -y sqlite3
 RUN apt-get install -y libgmp3-dev
 RUN apt-get install -y libsystemd-dev
