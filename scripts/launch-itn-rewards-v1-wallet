@@ -1,0 +1,2 @@
+#!/bin/bash
+cardano-wallet launch --genesis-block-hash $(cat /config/testnet/itn_rewards_v1.genesis.txt) --state-dir /data/testnet/itn_rewards_v1 -- --config /config/testnet/itn_rewards_v1.yaml

@@ -1,0 +1,2 @@
+#!/bin/bash
+cardano-wallet launch --genesis-block-hash $(cat /config/testnet/legacy.genesis.txt) --state-dir /data/testnet/legacy -- --config /config/testnet/legacy.yaml
