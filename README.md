@@ -28,8 +28,9 @@ make 2019-12-13
 ## Run
 The Docker image has no entry point and is intended to be used interactively.
 ```
-docker run -it adalove/cardano-playground:2019-12-13
+docker run -it adalove/cardano-playground:2019-12-13 -name cardano-play
 ```
+The program [tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/) can be used to manage multiple session, such that it is possible to easily run and monitor multiple non-terminating applications.
 
 ### Where to store the data?
 There are several ways to store data used by applications that run in Docker containers. We encourage users of our images to familiarize themselves with the options available, including: 
