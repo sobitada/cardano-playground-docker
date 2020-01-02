@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:buster
 
 RUN apt-get update
 RUN apt-get install -y wget
@@ -24,6 +24,10 @@ RUN chown lovelace -R /config
 RUN apt-get install -y sqlite3
 RUN apt-get install -y libgmp3-dev
 RUN apt-get install -y libsystemd-dev
+
+# workaround for libcrypto issue
+# https://github.com/input-output-hk/cardano-wallet/issues/923
+RUN ln -s /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 /usr/lib/libcrypto.so.1.0.0
 
 ARG CWALLET_VERSION
 
