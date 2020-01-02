@@ -1,4 +1,7 @@
-latest: 2019-12-13
+latest: 2019-12-23
+
+2019-12-23:
+	docker build . --build-arg JOR_VERSION="0.8.5" --build-arg CWALLET_VERSION="2019-12-23" -t adalove/cardano-playground:2019-12-23
 
 2019-12-13:
 	docker build . --build-arg JOR_VERSION="0.8.2" --build-arg CWALLET_VERSION="2019-12-13" -t adalove/cardano-playground:2019-12-13
